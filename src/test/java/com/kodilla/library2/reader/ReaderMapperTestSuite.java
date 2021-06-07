@@ -5,6 +5,7 @@ import com.kodilla.library2.reader.domain.Reader;
 import com.kodilla.library2.reader.domain.ReaderDto;
 import com.kodilla.library2.reader.mapper.ReaderMapper;
 import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,7 @@ public class ReaderMapperTestSuite {
     @Autowired
     private ReaderMapper readerMapper;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         dataBase = new DataBase();
     }

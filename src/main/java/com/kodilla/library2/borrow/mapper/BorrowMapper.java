@@ -3,9 +3,7 @@ package com.kodilla.library2.borrow.mapper;
 import com.kodilla.library2.book.mapper.BookMapper;
 import com.kodilla.library2.borrow.domain.Borrow;
 import com.kodilla.library2.borrow.domain.BorrowDto;
-import com.kodilla.library2.reader.domain.ReaderDto;
 import com.kodilla.library2.reader.mapper.ReaderMapper;
-import com.kodilla.library2.reader.domain.Reader;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -21,7 +19,7 @@ public final class BorrowMapper {
     public Borrow mapToBorrow (final BorrowDto borrowDto) {
         return Borrow.builder()
                 .id(borrowDto.getId())
-                .reader(readerMapper.mapToReader(borrowDto.getReader())
+                .reader(readerMapper.mapToReader(borrowDto.getReader()))
                 .book(bookMapper.mapToBook(borrowDto.getBook()))
                 .borrowDate(borrowDto.getBorrowDate())
                 .returnDate(borrowDto.getReturnDate())

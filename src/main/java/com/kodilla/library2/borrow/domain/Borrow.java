@@ -1,11 +1,11 @@
 package com.kodilla.library2.borrow.domain;
 
 import com.kodilla.library2.book.domain.Book;
+import com.kodilla.library2.reader.domain.Reader;
 import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.io.Reader;
 import java.time.LocalDate;
 
 @Builder
